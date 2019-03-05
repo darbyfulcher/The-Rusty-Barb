@@ -137,7 +137,7 @@ h6 {
 /* Side Menu */
 #sidebar-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   right: 0;
   width: 250px;
   height: 100%;
@@ -280,8 +280,9 @@ h6 {
 }
 
 .portfolio-item .caption .caption-content h2 {
-  font-size: 1.5rem;
+  font-size: 5rem;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .portfolio-item .caption .caption-content p {
@@ -302,9 +303,10 @@ h6 {
   .portfolio-item .caption .caption-content {
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
+    margin-left: 2.5rem;
     margin-right: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1.5rem;
   }
   .portfolio-item img {
     -webkit-transition: -webkit-clip-path 0.25s ease-out;
@@ -454,25 +456,43 @@ a:hover, a:focus, a:active {
 .lightBox .modal-content {
   position: relative;
   /* background-color: #fefefe; */
-  /* background: rgba(0, 0, 0, 0.4); */
-  background: none;
+  background: rgba(255, 255, 255, .8);
+  /* background: none; */
   margin: auto;
   padding: 0;
-  width: 90%;
-  max-width: 1200px;
+  /* width: 90%; */
+  width: 100%;
+  /* max-width: 1200px; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  border: none;
+}
+
+.lightBox .modal-content img {
+  /* position: relative; */
+  /* background-color: #fefefe; */
+  /* background: rgba(0, 0, 0, 0.4); */
+  /* background: none; */
+  margin: auto;
+  /* padding: 0; */
+  /* width: 90%; */
+  /* max-width: 1200px; */
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
 }
 
 /* The Close Button */
 .lightBox .close {
-  color: #1D809F;
+  color: #1D809F; /* blue */
   position: absolute;
   top: 10px;
   right: 25px;
   font-size: 55px;
   font-weight: bold;
+  opacity: 1;
+  z-index: 1;
 }
 
 .lightBox .close:hover,
@@ -496,29 +516,30 @@ a:hover, a:focus, a:active {
 }
 
 /* Next & previous buttons */
-.lightBox .prev,
-.lightBox .next {
+.lightBox .modal-content .prev,
+.lightBox .modal-content .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  margin-top: -50px;
   width: auto;
   padding: 16px;
-  margin-top: -50px;
-  color: white;
+  /* color: white; */
+  color: #1D809F; /* blue */
   font-weight: bold;
   font-size: 20px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
-  background-color: rgba(0, 0, 0, 0.4)
+  /* background-color: rgba(0, 0, 0, 0.4) */
+  background-color: none;
 }
 
 /* Position the "next button" to the right */
 .lightBox .next {
   right: 0;
   border-radius: 3px 0 0 3px;
-
 }
 
 /* On hover, add a black background color with a little bit see-through */
